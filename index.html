@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Rinso — a token on Robinhood Chain</title>
+<meta name="description" content="Rinso: one contract, one chain. The address renders inert until it's actually stated." />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top">
+      <img class="brand-mark" src="assets/logo.png" alt="" width="32" height="32" />
+      <span class="brand-name">Rinso</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <a href="#contract">Contract</a>
+      <a href="#token">Token</a>
+      <a href="#faq">FAQ</a>
+      <a href="#log">Log</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 4.354a4.5 4.5 0 1 0 0 15.292 4.5 4.5 0 0 0 0-15.292zM12 2v2m0 16v2M4.222 4.222l1.414 1.414M18.364 18.364l1.414 1.414M2 12h2m16 0h2M4.222 19.778l1.414-1.414M18.364 5.636l1.414-1.414"/></svg>
+      </button>
+      <nav class="social-nav" aria-label="Social">
+        <a class="social-link" data-gate="social" data-social-id="x" href="#" aria-disabled="true" aria-label="X (link not yet confirmed)" tabindex="-1">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a class="social-link" data-gate="social" data-social-id="github" href="#" aria-disabled="true" aria-label="GitHub (link not yet confirmed)" tabindex="-1">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.754-1.333-1.754-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.775.42-1.305.763-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="ca-bar" id="contract">
+    <div class="wrap ca-bar-inner" data-gate="contract" data-gate-status="absent">
+      <span class="ca-label">Contract · Robinhood Chain</span>
+      <button class="ca-value" type="button" data-ca-button disabled>
+        <span data-ca-text>not yet deployed</span>
+      </button>
+      <span class="ca-hint" data-ca-hint>renders live the moment it's stated</span>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <p class="eyebrow">Robinhood Chain · chain id 4663</p>
+    <h1>One contract. One chain. Nothing to click yet.</h1>
+    <p class="hero-sub">
+      Rinso is a token launching on Robinhood Chain. No app, no kit, no early
+      link to follow — just this page, kept honest about what's real and what
+      still isn't.
+    </p>
+    <p class="hero-warn">
+      There is no contract address to trade against right now. If you see one
+      elsewhere with this name on it, it did not come from here.
+    </p>
+  </section>
+
+  <section class="panel wrap" id="chain">
+    <h2>Where this lives</h2>
+    <p class="panel-lede">The chain is fixed. Everything about the token itself is not, yet.</p>
+    <dl class="fact-grid" data-registry="chain">
+      <div><dt>Network</dt><dd data-field="name"></dd></div>
+      <div><dt>Chain ID</dt><dd data-field="chainIdDec"></dd></div>
+      <div><dt>Chain ID (hex)</dt><dd data-field="chainIdHex"></dd></div>
+      <div><dt>RPC</dt><dd class="mono" data-field="rpc"></dd></div>
+    </dl>
+    <p class="fact-source" data-field="source"></p>
+  </section>
+
+  <section class="panel wrap" id="token">
+    <h2>The token</h2>
+    <p class="panel-lede">Nothing below is a placeholder number — every field is marked absent because there's no deployed contract to read it from yet.</p>
+
+    <div class="tabs" data-tabs>
+      <div class="tab-list" role="tablist" aria-label="Token data">
+        <button role="tab" aria-selected="true" data-tab="supply">Supply</button>
+        <button role="tab" aria-selected="false" data-tab="market">Market</button>
+      </div>
+
+      <div class="tab-panel" data-tab-panel="supply">
+        <div class="stat-grid" data-inert="true">
+          <div class="stat-tile"><span class="stat-label">Total supply</span><span class="stat-value">—</span></div>
+          <div class="stat-tile"><span class="stat-label">Burned</span><span class="stat-value">—</span></div>
+          <div class="stat-tile"><span class="stat-label">Circulating</span><span class="stat-value">—</span></div>
+          <div class="stat-tile"><span class="stat-label">Holders</span><span class="stat-value">—</span></div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-tab-panel="market" hidden>
+        <div class="stat-grid" data-inert="true">
+          <div class="stat-tile"><span class="stat-label">Price</span><span class="stat-value">—</span></div>
+          <div class="stat-tile"><span class="stat-label">Fully diluted value</span><span class="stat-value">—</span></div>
+          <div class="stat-tile"><span class="stat-label">Liquidity</span><span class="stat-value">—</span></div>
+          <div class="stat-tile"><span class="stat-label">24h volume</span><span class="stat-value">—</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel wrap" id="faq">
+    <h2>Questions people ask</h2>
+    <div class="faq-list" data-faq></div>
+  </section>
+
+  <section class="panel wrap" id="log">
+    <h2>What's actually changed</h2>
+    <p class="panel-lede">Grows only when a fact changes state.</p>
+    <ol class="changelog" data-changelog></ol>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span>Rinso</span>
+    <span class="footer-note">No contract deployed. Nothing here is financial advice.</span>
+  </div>
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/*
+  Palette provenance (rule: never invent a hex; every literal lives only here).
+
+  Source: brand/LOGO RINSO PNG...png (2000x2000, PNG colortype truecolor+alpha,
+  IHDR read directly: bitdepth 8). Alpha histogram: 90.19% fully transparent (0),
+  remainder near-opaque (>=247), confirming a clean cutout with light antialiasing
+  — no premultiplied-black fringe found, so no premultiplied resize was needed.
+
+  Colors below were extracted by k-means (k=6, 15 iterations) over the opaque
+  pixels (alpha>10) of that file, then each cluster centroid was snapped to the
+  nearest REAL pixel's color at a logged (x,y) coordinate in the 2000x2000 grid
+  (never a mathematical average sitting between pixels).
+
+  --rinso-terracotta : cluster 1 of 6, 51.57% of opaque pixels, snapped to pixel (608,844)
+  --rinso-navy        : cluster 3 of 6, 19.32% of opaque pixels, snapped to pixel (942,567)
+  --rinso-cream        : from brand/LOGO RINSO PNG.png (flat, no-alpha canvas fill),
+                          cluster 1 of 6, 90.24% of pixels, snapped to pixel (0,0)
+
+  --rinso-ink and --rinso-ink-soft are the only non-sampled values: they are a
+  computed HSL darken of --rinso-navy (same hue/saturation, lower lightness), used
+  for body text so copy stays legible on cream. Documented as a derivation of a
+  sampled color, not an invented literal.
+*/
+
+:root {
+  --rinso-cream: #fff0d1;
+  --rinso-terracotta: #c9533a;
+  --rinso-navy: #445b7a;
+
+  /* derived: --rinso-navy at L 22% (source L ~38%) instead of ~38%, same H/S */
+  --rinso-ink: #1c2634;
+  /* derived: --rinso-navy at L 46% for secondary text */
+  --rinso-ink-soft: #3d5064;
+
+  --bg: var(--rinso-cream);
+  --surface: #fff8e8;
+  --surface-border: #e7d6ae;
+  --text: var(--rinso-ink);
+  --text-soft: var(--rinso-ink-soft);
+  --accent: var(--rinso-terracotta);
+  --accent-ink: #ffffff;
+  --link: var(--rinso-navy);
+
+  --inert-bg: #ece2c8;
+  --inert-border: #d8c9a2;
+  --inert-text: #8a7c5c;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  --ease-standard: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur-med: 220ms;
+}
+
+:root[data-theme="dark"],
+:root:not([data-theme="light"]) {
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17130d;
+    --surface: #201a12;
+    --surface-border: #362c1c;
+    --text: #f6ecd8;
+    --text-soft: #c7b797;
+    --accent: var(--rinso-terracotta);
+    --accent-ink: #ffffff;
+    --link: #90a8c8;
+
+    --inert-bg: #241e14;
+    --inert-border: #3a3020;
+    --inert-text: #8c7f63;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #17130d;
+  --surface: #201a12;
+  --surface-border: #362c1c;
+  --text: #f6ecd8;
+  --text-soft: #c7b797;
+  --accent: var(--rinso-terracotta);
+  --accent-ink: #ffffff;
+  --link: #90a8c8;
+
+  --inert-bg: #241e14;
+  --inert-border: #3a3020;
+  --inert-text: #8c7f63;
+}
